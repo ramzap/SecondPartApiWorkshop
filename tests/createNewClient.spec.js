@@ -6,7 +6,7 @@ chai.use(require('chai-http'));
 export let clientName;
 
 describe('Client create test suite', async () => {
-    it('Should test that it is possible to create new client @debug', async () =>{
+    it('Should test that it is possible to create new client', async () =>{
         const timeStamp = new Date().toLocaleString();
         clientName = `Name of organization ${timeStamp}`;
         const responseFromClientCreate = await createClient(clientName);
