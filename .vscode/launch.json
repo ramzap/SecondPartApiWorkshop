@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Tagged",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "env": { "NODE_ENV": "vln"},
+            "args": [
+                "--grep",
+                "@debug",
+                "-r",
+                "esm",
+                "--file",
+                "utils/globalHooks.js",
+                "--timeout",
+                "55000",
+                "--colors",
+                "${workspaceFolder}/tests/*.spec.js",
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "protocol": "inspector"
+        }
+    ]
+  }
